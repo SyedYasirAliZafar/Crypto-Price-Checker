@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* puri screen cover kare */
+    color: #fff; /* text white ho jaye */
+    font-family: Arial, sans-serif;
+
+    /* Background gradient */
+    background: linear-gradient(135deg, #0b004e, #1d152f, #002834);
+    background-attachment: fixed;
+}
+
+.home {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+
+.hero {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+}
+
+.hero form {
+    padding: 8px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero input {
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.hero button {
+    border: none;
+    background: #7927ff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.crypto-table {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+/* Default table layout (desktop) */
+.table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    color: #fff;
+}
+
+.table-layout:nth-child(even) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.table-header {
+    font-weight: bold;
+    background: rgba(84,3,255,0.25);
+}
+
+.market-cap {
+    text-align: right;
+}
+
+.table-layout:last-child {
+    border: none;
+}
+
+.table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-layout div img {
+    width: 35px;
+}
+
+.table-layout .green {
+    color: #00D515;
+    text-align: center;
+}
+.table-layout .red {
+    color: #ff4646;
+    text-align: center;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+    .hero {
+        margin: 50px auto;
+    }
+    .hero h1 {
+        font-size: 28px;
+        width: 90%;
+    }
+    .hero form {
+        width: 90%;
+    }
+    .crypto-table {
+        max-width: 95%;
+    }
+    .table-layout {
+        grid-template-columns: 0.7fr 1.8fr 1fr 1fr 1fr;
+        font-size: 14px;
+        padding: 12px;
+    }
+    .table-layout div img {
+        width: 30px;
+    }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+    .hero {
+        margin: 40px auto;
+        gap: 20px;
+    }
+    .hero h1 {
+        font-size: 24px;
+    }
+    .hero form {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    .hero input, 
+    .hero button {
+        width: 100%;
+    }
+    .crypto-table {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .table-layout {
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+        font-size: 13px;
+        padding: 10px;
+    }
+    .table-layout div img {
+        width: 25px;
+    }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .hero form {
+        font-size: 16px;
+    }
+    .hero button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .table-layout {
+        grid-template-columns: 1fr 1.2fr 0.8fr 0.8fr 0.8fr; 
+        font-size: 12px;
+        padding: 8px;
+    }
+    .table-layout div img {
+        width: 20px;
+    }
+}

@@ -1,0 +1,52 @@
+.footer {
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+  border-top: 1px solid #989898;
+  padding: 15px 0;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Links inside footer */
+.footer a {
+  color: #00d5ff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .footer {
+    font-size: 12px;
+    max-width: 90%;
+  }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 11px;
+    padding: 12px 0;
+    max-width: 95%;
+  }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .footer a {
+    display: inline-block;
+    margin: 5px 6px;
+  }
+}
